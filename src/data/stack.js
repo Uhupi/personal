@@ -260,6 +260,16 @@ export const categories = [
         level: 4,
         tags: ['AI', 'productivity'],
       },
+      {
+        id: 'claude-code',
+        name: 'Claude Code',
+        description: 'Claude Code is an agentic coding tool made by Anthropic that lives in your terminal, understands your codebase, and helps you code faster through natural language.',
+        logo: null,
+        initials: 'CC',
+        color: '#d97757',
+        level: 5,
+        tags: ['AI', 'agentic'],
+      },
     ],
   },
 ]

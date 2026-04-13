@@ -223,4 +223,50 @@ const totalTools = computed(() =>
   height: 32px;
   background: $color-border;
 }
+
+@media (max-width: 768px) {
+  .profile-hero {
+    padding: 28px 0 24px;
+  }
+
+  .hero-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    padding: 0 16px;
+  }
+
+  .avatar {
+    width: 96px;
+    height: 96px;
+  }
+
+  .profile-name-row {
+    justify-content: center;
+  }
+
+  .profile-bio {
+    max-width: 100%;
+  }
+
+  .profile-meta {
+    justify-content: center;
+  }
+
+  .stack-stats {
+    width: 100%;
+    justify-content: center;
+    padding: 16px;
+    gap: 0;
+  }
+
+  .stat {
+    flex: 1;
+  }
+
+  .stat-divider {
+    height: 28px;
+  }
+}
 </style>
