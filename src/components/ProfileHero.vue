@@ -40,8 +40,8 @@
         </div>
         <div class="stat-divider"></div>
         <div class="stat">
-          <span class="stat-value">{{ totalVotes }}</span>
-          <span class="stat-label">Votes</span>
+          <span class="stat-value">23</span>
+          <span class="stat-label">Yrs Exp</span>
         </div>
         <div class="stat-divider"></div>
         <div class="stat">
@@ -62,10 +62,6 @@ const initials = computed(() =>
 )
 const totalTools = computed(() =>
   categories.reduce((sum, cat) => sum + cat.tools.length, 0)
-)
-const totalVotes = computed(() =>
-  categories.reduce((sum, cat) =>
-    sum + cat.tools.reduce((s, t) => s + t.votes, 0), 0)
 )
 </script>
 

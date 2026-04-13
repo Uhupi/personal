@@ -5,6 +5,11 @@ import vue from '@vitejs/plugin-vue'
 export default defineConfig({
   plugins: [vue()],
   publicDir: 'static',
+  server: {
+    watch: {
+      usePolling: true,
+    },
+  },
   build: {
     outDir: 'public',
     emptyOutDir: false,

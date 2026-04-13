@@ -1,5 +1,5 @@
 <template>
-  <article class="tool-card" :class="{ voted: hasVoted }">
+  <article class="tool-card">
     <div class="card-logo-wrap" :style="{ background: logoBg }">
       <img
         v-if="tool.logo && !imgFailed"
@@ -24,17 +24,12 @@
       <p class="tool-description">{{ tool.description }}</p>
     </div>
 
-    <button
-      class="vote-btn"
-      :class="{ voted: hasVoted }"
-      @click="toggleVote"
-      :aria-label="hasVoted ? 'Remove vote' : 'Vote for ' + tool.name"
-    >
+    <div class="level-badge" :aria-label="`Proficiency: ${tool.level} out of 5`">
       <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
         <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
       </svg>
-      <span>{{ displayVotes }}</span>
-    </button>
+      <span>{{ tool.level }}</span>
+    </div>
   </article>
 </template>
 
@@ -45,21 +40,12 @@ const props = defineProps({
   tool: { type: Object, required: true },
 })
 
-const hasVoted = ref(false)
-const extraVote = ref(0)
 const imgFailed = ref(false)
-
-const displayVotes = computed(() => props.tool.votes + extraVote.value)
 
 const logoBg = computed(() => {
   if (imgFailed.value || !props.tool.logo) return 'transparent'
   return props.tool.logoBg || 'transparent'
 })
-
-function toggleVote() {
-  hasVoted.value = !hasVoted.value
-  extraVote.value = hasVoted.value ? 1 : 0
-}
 
 function onImgError() {
   imgFailed.value = true
@@ -83,10 +69,6 @@ function onImgError() {
     border-color: rgba($color-accent, 0.35);
     background: $color-surface-raised;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  }
-
-  &.voted {
-    border-color: rgba($color-vote, 0.3);
   }
 }
 
@@ -156,7 +138,7 @@ function onImgError() {
   line-height: 1.6;
 }
 
-.vote-btn {
+.level-badge {
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
@@ -166,25 +148,10 @@ function onImgError() {
   border: 1px solid $color-border;
   border-radius: 8px;
   background: $color-surface-raised;
-  color: $color-text-muted;
-  cursor: pointer;
-  transition: all 0.18s;
+  color: $color-vote;
   font-size: 0.75rem;
   font-weight: 600;
   min-width: 46px;
   align-self: center;
-  font-family: inherit;
-
-  &:hover {
-    border-color: $color-vote;
-    color: $color-vote;
-    background: rgba($color-vote, 0.08);
-  }
-
-  &.voted {
-    border-color: $color-vote;
-    color: $color-vote;
-    background: rgba($color-vote, 0.1);
-  }
 }
 </style>
