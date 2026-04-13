@@ -1,15 +1,6 @@
 # Dependencies
 node_modules
 
-# Vite build output
-/assets/
-/favicon.svg
-/icons.svg
-/public/assets/
-/public/index.php
-/public/favicon.svg
-/public/icons.svg
-
 # Environment variables
 .env
 .env.*
