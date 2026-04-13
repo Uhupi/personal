@@ -1,0 +1,104 @@
+<template>
+  <header class="app-header">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-icon">⚡</span>
+        <span class="logo-text">MyStack</span>
+      </div>
+      <nav class="header-nav">
+        <a href="#stack">Stack</a>
+        <a href="#about">About</a>
+        <a :href="profile.github" target="_blank" rel="noopener" class="btn-github">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.167 6.839 9.49.5.09.682-.217.682-.482 0-.237-.009-.866-.013-1.7-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.03-2.682-.103-.254-.447-1.27.097-2.646 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.376.202 2.394.1 2.646.64.698 1.026 1.591 1.026 2.682 0 3.841-2.337 4.687-4.565 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.741 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
+          </svg>
+          GitHub
+        </a>
+      </nav>
+    </div>
+  </header>
+</template>
+
+<script setup>
+import { profile } from '../data/stack.js'
+</script>
+
+<style lang="scss" scoped>
+@use '../assets/styles/main.scss' as *;
+
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba($color-bg, 0.92);
+  border-bottom: 1px solid $color-border;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: $color-text-primary;
+
+  .logo-icon {
+    font-size: 1.3rem;
+  }
+
+  .logo-text {
+    background: linear-gradient(135deg, $color-accent, $color-accent-hover);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+
+  a {
+    color: $color-text-secondary;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: color 0.2s;
+
+    &:hover {
+      color: $color-text-primary;
+    }
+  }
+}
+
+.btn-github {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border: 1px solid $color-border;
+  border-radius: 8px;
+  color: $color-text-primary !important;
+  font-size: 0.8125rem !important;
+  background: $color-surface;
+  transition: border-color 0.2s, background 0.2s !important;
+
+  &:hover {
+    border-color: $color-accent !important;
+    background: $color-accent-glow !important;
+    color: $color-text-primary !important;
+  }
+}
+</style>

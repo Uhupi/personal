@@ -1,0 +1,28 @@
+# Dependencies
+node_modules
+
+# Vite build output
+/assets/
+/favicon.svg
+/icons.svg
+/public/assets/
+/public/index.php
+/public/favicon.svg
+/public/icons.svg
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Editor
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# OS
+.DS_Store
+Thumbs.db

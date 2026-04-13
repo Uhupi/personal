@@ -1,0 +1,53 @@
+// StackShare-inspired design system
+$color-bg: #0f1117;
+$color-surface: #1a1d27;
+$color-surface-raised: #1e2130;
+$color-border: #2a2d3e;
+$color-border-subtle: #1f2235;
+$color-accent: #5c67f2;
+$color-accent-hover: #7c85f5;
+$color-accent-glow: rgba(92, 103, 242, 0.15);
+$color-text-primary: #e8eaf0;
+$color-text-secondary: #8b8fa8;
+$color-text-muted: #555873;
+$color-tag-bg: #232640;
+$color-tag-text: #9ba3c5;
+$color-vote: #ff6b35;
+$color-badge-bg: rgba(92, 103, 242, 0.12);
+$font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-family;
+  background-color: $color-bg;
+  color: $color-text-primary;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: $color-accent;
+  text-decoration: none;
+  &:hover { color: $color-accent-hover; }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: $color-bg;
+}
+::-webkit-scrollbar-thumb {
+  background: $color-border;
+  border-radius: 3px;
+}
