@@ -19,14 +19,7 @@
     </main>
 
     <footer class="app-footer">
-      <p>
-        Built with
-        <a href="https://vuejs.org" target="_blank" rel="noopener">Vue 3</a> +
-        <a href="https://vitejs.dev" target="_blank" rel="noopener">Vite</a> +
-        <a href="https://sass-lang.com" target="_blank" rel="noopener">SCSS</a>
-        · Inspired by
-        <a href="https://stackshare.io" target="_blank" rel="noopener">StackShare</a>
-      </p>
+      <p>Santino Lange - 2026</p>
     </footer>
   </div>
 </template>

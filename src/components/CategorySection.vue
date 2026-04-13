@@ -64,6 +64,7 @@ defineProps({
 .tools-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  grid-auto-rows: 1fr;
   gap: 10px;
 }
 </style>

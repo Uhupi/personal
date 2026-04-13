@@ -1,19 +1,19 @@
 // StackShare-inspired design system
-$color-bg: #0f1117;
-$color-surface: #1a1d27;
-$color-surface-raised: #1e2130;
-$color-border: #2a2d3e;
-$color-border-subtle: #1f2235;
+$color-bg: #f5f7fa;
+$color-surface: #ffffff;
+$color-surface-raised: #eef1f7;
+$color-border: #dde1f0;
+$color-border-subtle: #e8ecf5;
 $color-accent: #5c67f2;
-$color-accent-hover: #7c85f5;
-$color-accent-glow: rgba(92, 103, 242, 0.15);
-$color-text-primary: #e8eaf0;
-$color-text-secondary: #8b8fa8;
-$color-text-muted: #555873;
-$color-tag-bg: #232640;
-$color-tag-text: #9ba3c5;
+$color-accent-hover: #4a54e8;
+$color-accent-glow: rgba(92, 103, 242, 0.1);
+$color-text-primary: #1a1d2e;
+$color-text-secondary: #555a78;
+$color-text-muted: #9295a8;
+$color-tag-bg: #eef0fb;
+$color-tag-text: #5a5f7a;
 $color-vote: #ff6b35;
-$color-badge-bg: rgba(92, 103, 242, 0.12);
+$color-badge-bg: rgba(92, 103, 242, 0.1);
 $font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
 *, *::before, *::after {
