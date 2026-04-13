@@ -2,7 +2,7 @@
   <section class="profile-hero" id="about">
     <div class="hero-inner">
       <div class="avatar">
-        <span class="avatar-initials">{{ initials }}</span>
+        <img :src="avatarImg" :alt="profile.name" class="avatar-photo" />
         <span class="avatar-badge">✓</span>
       </div>
 
@@ -56,10 +56,8 @@
 <script setup>
 import { computed } from 'vue'
 import { profile, categories } from '../data/stack.js'
+const avatarImg = '/assets/avatar.png'
 
-const initials = computed(() =>
-  profile.name.split(' ').map(n => n[0]).join('')
-)
 const totalTools = computed(() =>
   categories.reduce((sum, cat) => sum + cat.tools.length, 0)
 )
@@ -94,11 +92,11 @@ const totalTools = computed(() =>
   align-items: center;
   justify-content: center;
 
-  .avatar-initials {
-    font-size: 1.75rem;
-    font-weight: 700;
-    color: white;
-    letter-spacing: -0.5px;
+  .avatar-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
   }
 
   .avatar-badge {

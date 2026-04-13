@@ -5,7 +5,7 @@ export const profile = {
   location: 'Germany',
   github: 'https://github.com/Uhupi',
   website: 'https://www.intercambiando.de',
-  bio: 'Building web applications with PHP, Symfony, Vue.js, and modern JS tooling. Creator of the Uhupi MVC Framework.',
+  bio: 'Senior Full-Stack Developer with 20+ years of experience. Strong in Vue.js, React, TypeScript and PHP (Symfony, Laravel), with a track record of end-to-end ownership across frontend architecture, performance, and custom CMS development. I integrate AI tools like Claude Code and GitHub Copilot into my daily workflow as a core productivity driver. I ramp up fast, work autonomously, and bring technical depth from day one.',
   avatar: null,
 }
 
