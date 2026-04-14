@@ -18,8 +18,15 @@ for DB in "${DATABASES[@]}"; do
   echo "Done! File saved to $LOCAL_DIR/$(basename $REMOTE_FILE)"
 done
 
-echo "Downloading images/user folder..."
+echo "Compressing images/users folder on server..."
 REMOTE_IMAGES="/var/www/vhosts/lvps83-169-23-127.dedicated.hosteurope.de/intercambiando/images/users"
-scp -i ~/.ssh/id_backup -r "$SERVER:$REMOTE_IMAGES" "$LOCAL_DIR/intercambiando_images_user_$(date +%Y%m%d)"
+REMOTE_IMAGES_FILE="/root/intercambiando_images_users_$(date +%Y%m%d).tar.gz"
+ssh -i ~/.ssh/id_backup $SERVER "tar -czf $REMOTE_IMAGES_FILE -C $(dirname $REMOTE_IMAGES) $(basename $REMOTE_IMAGES)"
 
-echo "Done! Images saved to $LOCAL_DIR/intercambiando_images_user_$(date +%Y%m%d)"
+echo "Downloading compressed images..."
+scp -i ~/.ssh/id_backup "$SERVER:$REMOTE_IMAGES_FILE" "$LOCAL_DIR/"
+
+echo "Removing compressed file from server..."
+ssh -i ~/.ssh/id_backup $SERVER "rm -f $REMOTE_IMAGES_FILE"
+
+echo "Done! Images saved to $LOCAL_DIR/$(basename $REMOTE_IMAGES_FILE)"
