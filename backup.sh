@@ -17,3 +17,9 @@ for DB in "${DATABASES[@]}"; do
 
   echo "Done! File saved to $LOCAL_DIR/$(basename $REMOTE_FILE)"
 done
+
+echo "Downloading images/user folder..."
+REMOTE_IMAGES="/var/www/vhosts/lvps83-169-23-127.dedicated.hosteurope.de/intercambiando/images/users"
+scp -i ~/.ssh/id_backup -r "$SERVER:$REMOTE_IMAGES" "$LOCAL_DIR/intercambiando_images_user_$(date +%Y%m%d)"
+
+echo "Done! Images saved to $LOCAL_DIR/intercambiando_images_user_$(date +%Y%m%d)"
