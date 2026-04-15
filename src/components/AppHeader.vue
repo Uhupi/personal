@@ -2,8 +2,13 @@
   <header class="app-header">
     <div class="header-inner">
       <div class="logo">
-        <span class="logo-icon">⚡</span>
-        <span class="logo-text">MyStack</span>
+        <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" width="28" height="28">
+          <rect width="48" height="48" rx="10" fill="#0f0f0f"/>
+          <polyline points="14,14 6,24 14,34" stroke="#863bff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <polyline points="34,14 42,24 34,34" stroke="#863bff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <line x1="28" y1="13" x2="20" y2="35" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <span class="logo-text">Santino</span>
       </div>
       <nav class="header-nav">
         <a href="#stack">Stack</a>
@@ -55,7 +60,8 @@ import { profile } from '../data/stack.js'
   color: $color-text-primary;
 
   .logo-icon {
-    font-size: 1.3rem;
+    display: block;
+    flex-shrink: 0;
   }
 
   .logo-text {
