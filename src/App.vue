@@ -3,7 +3,7 @@
     <AppHeader />
     <router-view />
     <footer class="app-footer">
-      <p>Santino Lange — 2026 · <router-link to="/impressum">Impressum</router-link></p>
+      <p>Santino Lange — 2026 · <a href="https://webmail.uhupi.com" target="_blank" rel="noopener noreferrer">Webmail</a> · <router-link to="/impressum">Impressum</router-link></p>
     </footer>
   </div>
 </template>
