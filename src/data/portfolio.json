@@ -1,0 +1,35 @@
+[
+  {
+    "id": "intercambiando",
+    "name": "Intercambiando",
+    "domain": "intercambiando.de",
+    "url": "https://www.intercambiando.de",
+    "description": "A language exchange platform connecting learners of Spanish and German. Facilitates real communication between native speakers who want to practice each other's language — built with a focus on community and simplicity.",
+    "tags": ["PHP", "Vue.js", "MySQL", "i18n"],
+    "color": "#5c67f2",
+    "year": "2022",
+    "type": "Web Platform"
+  },
+  {
+    "id": "casa-lucero",
+    "name": "Casa Lucero",
+    "domain": "casa-lucero.org",
+    "url": "https://www.casa-lucero.org",
+    "description": "Website for Casa Lucero, a retreat and accommodation space. Features information pages, an image gallery, and contact management — designed to reflect a warm and welcoming atmosphere.",
+    "tags": ["WordPress", "PHP", "SCSS", "WooCommerce"],
+    "color": "#f59e0b",
+    "year": "2021",
+    "type": "NGO Website"
+  },
+  {
+    "id": "system-change",
+    "name": "System Change",
+    "domain": "system-change.org",
+    "url": "https://www.system-change.org",
+    "description": "A platform dedicated to systemic change and sustainability. Connects activists, shares resources, and drives meaningful societal transformation through collaborative tools and editorial content.",
+    "tags": ["WordPress", "PHP", "JavaScript", "SCSS"],
+    "color": "#10b981",
+    "year": "2023",
+    "type": "Non-Profit Platform"
+  }
+]

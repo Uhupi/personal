@@ -1,35 +1,15 @@
 <template>
   <div id="app">
     <AppHeader />
-
-    <ProfileHero />
-
-    <main class="main-layout" id="stack">
-      <CategoryNav />
-
-      <div class="stack-content">
-        <div
-          v-for="cat in categories"
-          :key="cat.id"
-          :id="'cat-' + cat.id"
-        >
-          <CategorySection :category="cat" />
-        </div>
-      </div>
-    </main>
-
+    <router-view />
     <footer class="app-footer">
-      <p>Santino Lange - 2026</p>
+      <p>Santino Lange — 2026 · <router-link to="/impressum">Impressum</router-link></p>
     </footer>
   </div>
 </template>
 
 <script setup>
 import AppHeader from './components/AppHeader.vue'
-import ProfileHero from './components/ProfileHero.vue'
-import CategoryNav from './components/CategoryNav.vue'
-import CategorySection from './components/CategorySection.vue'
-import { categories } from './data/stack.js'
 </script>
 
 <style lang="scss">
@@ -43,22 +23,6 @@ import { categories } from './data/stack.js'
   flex-direction: column;
 }
 
-.main-layout {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 24px;
-  display: flex;
-  gap: 40px;
-  align-items: flex-start;
-  flex: 1;
-  width: 100%;
-}
-
-.stack-content {
-  flex: 1;
-  min-width: 0;
-}
-
 .app-footer {
   border-top: 1px solid $color-border;
   padding: 24px;
@@ -69,24 +33,13 @@ import { categories } from './data/stack.js'
     color: $color-text-muted;
 
     a {
-      color: $color-text-secondary;
+      color: $color-text-muted;
       transition: color 0.2s;
 
       &:hover {
         color: $color-accent;
       }
     }
-  }
-}
-
-@media (max-width: 768px) {
-  .main-layout {
-    flex-direction: column;
-    padding: 24px 16px;
-  }
-
-  .category-nav {
-    display: none;
   }
 }
 </style>
